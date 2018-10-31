@@ -1,0 +1,47 @@
+{
+  "name": "@0xcert/json-schema",
+  "version": "0.1.0",
+  "description": "JSON Schema modeling and validation.",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "ava": {
+    "files": [
+      "./dist/tests/*.js",
+      "./dist/tests/**/*.js"
+    ],
+    "concurrency": 4,
+    "failFast": true
+  },
+  "scripts": {
+    "clean": "rm -Rf ./dist",
+    "build": "npm run clean; tsc",
+    "lint": "tslint 'src/**/*.ts?(x)'",
+    "prepublish": "npm run build",
+    "test": "npm run build && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xcert/json-schema-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0xcert/json-schema-js/issues"
+  },
+  "homepage": "https://github.com/0xcert/json-schema-js#readme",
+  "keywords": [
+    "0xcert",
+    "json",
+    "schema",
+    "validate",
+    "validator",
+    "nodejs",
+    "server",
+    "browser"
+  ],
+  "author": "0xcert",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
